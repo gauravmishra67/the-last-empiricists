@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night: #0B0F14;
+  --color-night-light: #111820;
+  --color-night-lighter: #1A2230;
+  --color-ember: #C97B4A;
+  --color-ember-light: #E09A6A;
+  --color-ember-dark: #A85F33;
+  --color-cyan-steel: #8FD9E8;
+  --color-cyan-steel-light: #B0E6F0;
+  --color-cyan-steel-dark: #5BBDD1;
+  --color-paper: #E8E4DC;
+  --color-paper-dim: #B8B4AC;
+  --color-paper-faint: #8A877F;
+
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+  --animate-drift: drift 20s ease-in-out infinite;
+  --animate-glow: glow 3s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(4px, -6px); }
+  50% { transform: translate(-3px, 4px); }
+  75% { transform: translate(5px, 2px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-night);
+  color: var(--color-paper);
+}
+
+::selection {
+  background-color: rgba(201, 123, 74, 0.35);
+  color: var(--color-paper);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-night);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-night-lighter);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ember-dark);
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-ember);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Reveal animation class */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
