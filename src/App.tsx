@@ -66,13 +66,13 @@ function MobileCTA() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 flex gap-3 border-t border-night-lighter bg-night/95 p-3 backdrop-blur-sm md:hidden">
       <a
-        href="/public/novel.pdf"
+        href="/novel.pdf"
         className="flex-1 rounded-lg bg-ember py-2.5 text-center font-sans text-sm font-semibold text-night transition-colors hover:bg-ember-light focus-visible:ring-2 focus-visible:ring-ember"
       >
         Read Online
       </a>
       <a
-        href="/public/novel.pdf"
+        href="/novel.pdf"
         download
         className="flex-1 rounded-lg border border-cyan-steel/40 py-2.5 text-center font-sans text-sm font-semibold text-cyan-steel transition-colors hover:bg-cyan-steel/10 focus-visible:ring-2 focus-visible:ring-cyan-steel"
       >
@@ -144,7 +144,7 @@ function Hero() {
         {/* CTAs */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
           <a
-            href="/public/novel.pdf"
+            href="/novel.pdf"
             className="group inline-flex items-center gap-2 rounded-lg bg-ember px-8 py-3.5 font-sans text-sm font-semibold text-night transition-all hover:bg-ember-light hover:shadow-lg hover:shadow-ember/20 focus-visible:ring-2 focus-visible:ring-ember sm:text-base"
           >
             <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -153,7 +153,7 @@ function Hero() {
             Read Online
           </a>
           <a
-            href="/public/novel.pdf"
+            href="/novel.pdf"
             download
             className="group inline-flex items-center gap-2 rounded-lg border border-cyan-steel/40 px-8 py-3.5 font-sans text-sm font-semibold text-cyan-steel transition-all hover:border-cyan-steel hover:bg-cyan-steel/10 hover:shadow-lg hover:shadow-cyan-steel/10 focus-visible:ring-2 focus-visible:ring-cyan-steel sm:text-base"
           >
@@ -420,7 +420,7 @@ function ReadDownload() {
               </div>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="/public/novel.pdf"
+                  href="novel.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-ember px-5 py-2.5 font-sans text-sm font-semibold text-night transition-all hover:bg-ember-light hover:shadow-lg hover:shadow-ember/20"
@@ -431,7 +431,7 @@ function ReadDownload() {
                   Read Online
                 </a>
                 <a
-                  href="/public/novel.pdf"
+                  href="novel.pdf"
                   download
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-steel/40 px-5 py-2.5 font-sans text-sm font-semibold text-cyan-steel transition-all hover:border-cyan-steel hover:bg-cyan-steel/10"
                 >
@@ -509,7 +509,7 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3">
         <a
-          href="#"
+          href="/novel.pdf"
           className="font-serif text-base font-semibold text-paper/80 transition-colors hover:text-paper"
           onClick={(e) => {
             e.preventDefault();
@@ -534,7 +534,7 @@ function Nav() {
             </a>
           ))}
           <a
-            href="/public/novel.pdf"
+            href="novel.pdf"
             onClick={(e) => handleClick(e, "read")}
             className="rounded-md bg-ember/90 px-4 py-1.5 font-sans text-sm font-medium text-night transition-colors hover:bg-ember"
           >
