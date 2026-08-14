@@ -204,7 +204,7 @@ function Premise() {
             refused. They build with salvage, heal with memory, and teach their
             children the old way: observe, test, decide for yourself.{" "}
             <span className="text-paper">
-              Harry is fifteen and has never seen the city. But he has memorized
+              Harry is Nineteen and has never seen the city. But he has memorized
               the sentinel patrols, counted their intervals to the second, and
               one night he walks toward the light everyone else walks away from.
             </span>
